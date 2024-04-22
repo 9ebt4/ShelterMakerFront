@@ -1,0 +1,17 @@
+  <div class="d-flex justify-content-center align-items-center vh-100 text-center">
+  
+        <div class="card" style="width: 18rem;">
+          <img src="assets/Images/ShelterImage.png" class="card-img-top" alt="The Mission">
+          <div class="card-body">
+            <h5 class="card-title">Welcome to the Intake Portal</h5>
+            <p class="card-text">Click to Login</p>
+            @if (!loggedIn) {
+              <!-- Custom component that handles log in -->
+              <asl-google-signin-button></asl-google-signin-button>
+            }
+          </div>
+        </div>
+      
+    
+  </div>
+  

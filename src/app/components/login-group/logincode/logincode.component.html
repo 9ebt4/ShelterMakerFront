@@ -1,0 +1,28 @@
+<div class="d-flex justify-content-center align-items-center vh-100 text-center">
+  <div class="card" [ngClass]="{'failed': isFailed}" style="width: 18rem;">
+        <img src="assets/Images/ShelterImage.png" class="card-img-top" alt="The Mission">
+        <div class="card-body">
+          @if(isFailed) {
+            <h1 style="color: red;">Invalid facility code</h1>
+          }
+          
+          <h5 class="card-title">Please Enter Building Code</h5>
+          @if(loggedIn){
+            <div>
+              <img src="{{ user.photoUrl }}" />
+              <div>
+                <h4>{{ user.name }}</h4>
+                <p>{{ user.email }}</p>
+              </div>
+            </div>
+        }
+        @else if(!loggedIn) {
+            <p>Not logged in</p>
+        }
+          <input type="text" name="buildingCode" [(ngModel)]="buildingCode"/>
+          <button (click)="CreateGoogleUser()">Submit</button>
+          
+        </div>
+      </div>
+  </div>
+  
